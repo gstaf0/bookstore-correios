@@ -25,6 +25,6 @@ Scenario Outline: exibir os detalhes de entrega
 	
 	Examples:
 		| clientID | rastreamentoCodigo | 		statusEntrega		| 	prazoEntrega	|
-		|	 01    |	  0014FA00001   |  Produto em separacao     |    14/10/2016		|
-		|	 02	   |	  0014FA80002	|  Transporte em andamento  |    14/10/2016		|
-		|	 03	   |	  0014FA81003   |  Produto entregue    		|    14/10/2016		|
+		|	 01    |	  00148900001   |  Produto em separacao     |    14/10/2016		|
+		|	 02	   |	  00148980002	|  Transporte em andamento  |    14/10/2016		|
+		|	 03	   |	  00148981003   |  Produto entregue    		|    14/10/2016		|
