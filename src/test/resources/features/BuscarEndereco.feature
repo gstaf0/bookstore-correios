@@ -9,7 +9,7 @@ Scenario Outline: cliente fornece um CEP valido
 	Examples:
 		| CEPdestino |                  enderecoDestino                      |
 		|  13083000  | Avenida Doutor Luis de Tella, Barão Geraldo, Campinas |
-		|  13083000  |          Rua da Abolicao, Ponte Preta, Campinas       | 
+		|  13041445  |          Rua da Abolicao, Ponte Preta, Campinas       | 
 		
 Scenario: sistema dos correios desconectado 
 	Given o sistema não está com acesso aos correios  

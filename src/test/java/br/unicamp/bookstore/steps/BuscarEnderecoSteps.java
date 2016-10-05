@@ -2,7 +2,6 @@ package br.unicamp.bookstore.steps;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import br.unicamp.bookstore.Cliente;
@@ -18,17 +17,13 @@ public class BuscarEnderecoSteps {
 	private Cliente cliente;
 	private Pedido pedido;
 	private Correios correios;
-	private Throwable throwable;
 	
 	@Before
     public void setUp() {
 		cliente = new Cliente();
     	pedido = new Pedido();
     	correios = new Correios();
-    	
     	cliente.addPedido(pedido);
-    	
-    	throwable = null;
     }
 	
 	@Given("^o sistema está com acesso aos correios$")

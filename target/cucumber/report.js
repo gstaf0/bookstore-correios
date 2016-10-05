@@ -53,7 +53,7 @@ formatter.examples({
     },
     {
       "cells": [
-        "13083000",
+        "13041445",
         "Rua da Abolicao, Ponte Preta, Campinas"
       ],
       "line": 12,
@@ -63,7 +63,7 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 1162098,
+  "duration": 1046010,
   "status": "passed"
 });
 formatter.scenario({
@@ -108,7 +108,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 63463,
+  "duration": 57966,
   "status": "passed"
 });
 formatter.scenario({
@@ -126,7 +126,7 @@ formatter.step({
 });
 formatter.step({
   "line": 6,
-  "name": "o cliente preencheu o CEP do endereco de entrega 13083000",
+  "name": "o cliente preencheu o CEP do endereco de entrega 13041445",
   "matchedColumns": [
     0
   ],
@@ -153,7 +153,7 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 58090,
+  "duration": 43986,
   "status": "passed"
 });
 formatter.scenario({
