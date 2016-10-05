@@ -17,6 +17,7 @@ public class Correios {
 	private String mensagemErro;
 	private float valorFrete;
 	private int prazoEntrega;
+	private String endereco;
 	
 	public Correios() {
 		pesoProd = new ArrayList<Integer>();
@@ -71,6 +72,10 @@ public class Correios {
 
 	public int getPrazoEntrega() {
 		return prazoEntrega;
+	}
+	
+	public String getEndereco(long cep) {
+		return endereco;
 	}
 	
 	public void setApiUp(boolean apiUp) {
