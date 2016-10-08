@@ -12,7 +12,7 @@ Scenario Outline: envio de dados do produto
 		And o <tipoEntrega>
 		And o endereco de origem <CEPorigem>
 	When o cliente preenche o CEP do endereco de entrega <CEPdestino>
-		And o sistema está com acesso aos correios
+		And o sistema esta com acesso aos correios
 	Then o sistema verifica a validade dos dados
 		And retorna <valorFrete>, <prazoEntrega> e eventual <mensagemErro>	
 		
@@ -31,3 +31,10 @@ Scenario Outline: envio de dados do produto
 		|    01      |  80  |    90   |   15   |      80	 |    SEDEX    | 129122200 |  13083999  |   13,80    |      03      | -3: CEP Destino Invalido     |
 		|    02      | 110  |    20   |   12   |      40	 |      --     |     --    |     --     |     --     |      --      |             --               |
 		|    --      | 130  |    33   |    8   |     120	 |    SEDEX    | 129122200 |  13083000  |   14,10    |      07      | 0: Processamento com Sucesso |
+
+Scenario: Armazena dados de entrega no sistema
+	Given Sistema tem acesso aos Correios
+	When Correios retorna prazo de entrega
+		And valor do frete
+	Then valores sao armazenados no sistema
+		

@@ -3,6 +3,8 @@ package br.unicamp.bookstore;
 import java.util.List;
 import java.util.ArrayList;
 
+import br.unicamp.bookstore.dao.DadosDeEntregaDAO;
+
 public class Correios {
 	
 	private boolean apiUp; 
@@ -15,15 +17,18 @@ public class Correios {
 	private long cepDest;
 	private String tipoEntrega;
 	private String mensagemErro;
-	private float valorFrete;
+	private Double valorFrete;
 	private int prazoEntrega;
 	private String endereco;
 	
-	public Correios() {
+	private DadosDeEntregaDAO dao;
+	
+	public Correios(DadosDeEntregaDAO dao) {
 		pesoProd = new ArrayList<Integer>();
 		larguraProd = new ArrayList<Integer>();
 		alturaProd = new ArrayList<Integer>();
 		comprimentoProd = new ArrayList<Integer>();
+		this.dao = dao;
 	}
 	
 	public boolean getApiUp() {
@@ -66,7 +71,7 @@ public class Correios {
 		return mensagemErro;
 	}
 	
-	public float getValorFrete() {
+	public Double getValorFrete() {
 		return valorFrete;
 	}
 
@@ -118,12 +123,16 @@ public class Correios {
 		this.mensagemErro = mensagemErro;
 	}
 	
-	public void setValorFrete(float valorFrete) {
+	public void setValorFrete(Double valorFrete) {
 		this.valorFrete = valorFrete;
 	}
 
 	public void setPrazoEntrega(int prazoEntrega) {
 		this.prazoEntrega = prazoEntrega;
+	}
+	
+	public void salvarInformacoes(Double valorFrete, Integer diasEntrega) {
+		dao.saveDadosDeEntrega(valorFrete, diasEntrega);
 	}
 
 }

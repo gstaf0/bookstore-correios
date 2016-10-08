@@ -22,7 +22,7 @@ public class BuscarEnderecoSteps {
     public void setUp() {
 		cliente = new Cliente();
     	pedido = new Pedido();
-    	correios = new Correios();
+    	//correios = new Correios();
     	cliente.addPedido(pedido);
     }
 	
