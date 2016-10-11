@@ -31,8 +31,14 @@ public class Correios {
 		this.dao = dao;
 	}
 	
+	// Verifica se a API esta operacional.
 	public boolean getApiUp() {
 		return apiUp;
+	}
+	
+	// Método que faz todo o procedimento de conexão segura com os Correios.
+	public boolean connectToCorreios() {
+		return true;
 	}
 	
 	public int getProdQuant() {

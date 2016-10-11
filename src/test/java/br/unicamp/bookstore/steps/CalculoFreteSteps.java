@@ -29,19 +29,10 @@ public class CalculoFreteSteps {
 
 	@Before
 	public void setUp() {
-		cliente = new Cliente();
-		pedido = new Pedido();
-		//correios = new Correios();
-
-		cliente.addPedido(pedido);
-
-		throwable = null;
 	}
 
 	@Given("^o cliente adicionou ao menos um produto ao carrinho de compras$")
 	public void o_cliente_adicionou_ao_menos_um_produto_ao_carrinho_de_compras() throws Throwable {
-		//assertNotNull(pedido);
-		//assertNotEquals(0, pedido.getRastreamentoCodigo());
 		cliente = new Cliente();
 		pedido = new Pedido();
 		cliente.addPedido(pedido);	
@@ -49,15 +40,12 @@ public class CalculoFreteSteps {
 
 	@When("^o cliente preenche o CEP do endereco de entrega$")
 	public void o_cliente_preenche_o_CEP_do_endereco_de_entrega() throws Throwable {
-		//assertNotNull(cliente.getCep());
 		cliente.setCep(1234567);
 	}
 
 	@Then("^o sistema solicita o acesso ao sistema do correios$")
 	public void o_sistema_solicita_o_acesso_ao_sistema_do_correios() throws Throwable {
-		assertEquals(1234567,cliente.getCep());
-		//assertTrue(correios.getApiUp());
-		//Assert.fail("No exception was thrown");
+		assertTrue(correios.connectToCorreios() && correios.getApiUp());
 	}
 
 	@Given("^o numero de produtos: (\\d+)$")

@@ -7,19 +7,19 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 2173148,
+  "duration": 2936012,
   "status": "passed"
 });
 formatter.before({
-  "duration": 52001,
+  "duration": 164202,
   "status": "passed"
 });
 formatter.before({
-  "duration": 35201,
+  "duration": 797708,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1172708,
+  "duration": 571795,
   "status": "passed"
 });
 formatter.scenario({
@@ -49,23 +49,22 @@ formatter.match({
   "location": "CalculoFreteSteps.o_cliente_adicionou_ao_menos_um_produto_ao_carrinho_de_compras()"
 });
 formatter.result({
-  "duration": 85278844,
+  "duration": 547434563,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.o_cliente_preenche_o_CEP_do_endereco_de_entrega()"
 });
 formatter.result({
-  "duration": 23173,
+  "duration": 83470,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.o_sistema_solicita_o_acesso_ao_sistema_do_correios()"
 });
 formatter.result({
-  "duration": 10833068,
-  "error_message": "java.lang.AssertionError: expected:\u003c123456\u003e but was:\u003c1234567\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_sistema_solicita_o_acesso_ao_sistema_do_correios(CalculoFreteSteps.java:57)\n\tat ✽.Then o sistema solicita o acesso ao sistema do correios(features/CalculoFrete.feature:7)\n",
-  "status": "failed"
+  "duration": 10112505,
+  "status": "passed"
 });
 formatter.scenarioOutline({
   "line": 9,
@@ -352,19 +351,19 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 24238,
+  "duration": 87617,
   "status": "passed"
 });
 formatter.before({
-  "duration": 23116,
+  "duration": 59564,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13638,
+  "duration": 44985,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12736,
+  "duration": 34319,
   "status": "passed"
 });
 formatter.scenario({
@@ -448,8 +447,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 3210715,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 14876796,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -523,19 +522,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 21494,
+  "duration": 84108,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14686,
+  "duration": 51434,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14770,
+  "duration": 55503,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13675,
+  "duration": 58506,
   "status": "passed"
 });
 formatter.scenario({
@@ -619,8 +618,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 2968566,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 709797,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -694,19 +693,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 23797,
+  "duration": 67999,
   "status": "passed"
 });
 formatter.before({
-  "duration": 15597,
+  "duration": 195863,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14145,
+  "duration": 59828,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12837,
+  "duration": 137160,
   "status": "passed"
 });
 formatter.scenario({
@@ -790,8 +789,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 1633192,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 418013,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -863,19 +862,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 27226,
+  "duration": 63037,
   "status": "passed"
 });
 formatter.before({
-  "duration": 15191,
+  "duration": 43838,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14215,
+  "duration": 77282,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13510,
+  "duration": 36847,
   "status": "passed"
 });
 formatter.scenario({
@@ -959,8 +958,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 1373781,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 510071,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1034,19 +1033,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 25254,
+  "duration": 42324,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14767,
+  "duration": 41321,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14103,
+  "duration": 33154,
   "status": "passed"
 });
 formatter.before({
-  "duration": 15132,
+  "duration": 67451,
   "status": "passed"
 });
 formatter.scenario({
@@ -1130,8 +1129,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 2048722,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 535616,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1205,19 +1204,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 23031,
+  "duration": 41733,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18853,
+  "duration": 45134,
   "status": "passed"
 });
 formatter.before({
-  "duration": 14249,
+  "duration": 45165,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12809,
+  "duration": 117192,
   "status": "passed"
 });
 formatter.scenario({
@@ -1301,8 +1300,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 3400917,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 541486,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1376,19 +1375,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 18661,
+  "duration": 65118,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13802,
+  "duration": 58428,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12274,
+  "duration": 53743,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11426,
+  "duration": 51236,
   "status": "passed"
 });
 formatter.scenario({
@@ -1472,8 +1471,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 1855634,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 15225011,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1547,19 +1546,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 17797,
+  "duration": 104387,
   "status": "passed"
 });
 formatter.before({
-  "duration": 25007,
+  "duration": 138685,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12709,
+  "duration": 66956,
   "status": "passed"
 });
 formatter.before({
-  "duration": 16065,
+  "duration": 32036,
   "status": "passed"
 });
 formatter.scenario({
@@ -1643,8 +1642,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 3808855,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 8040038,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1718,19 +1717,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 24803,
+  "duration": 43405,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13135,
+  "duration": 46032,
   "status": "passed"
 });
 formatter.before({
-  "duration": 56965,
+  "duration": 43552,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11703,
+  "duration": 25243,
   "status": "passed"
 });
 formatter.scenario({
@@ -1814,8 +1813,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 1460410,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 488353,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -1889,19 +1888,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 24437,
+  "duration": 72177,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13182,
+  "duration": 70574,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13374,
+  "duration": 153002,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11085,
+  "duration": 46372,
   "status": "passed"
 });
 formatter.scenario({
@@ -1985,8 +1984,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 2258131,
-  "error_message": "java.lang.AssertionError: expected:\u003c1\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
+  "duration": 524256,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 01(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -2060,19 +2059,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 25458,
+  "duration": 81609,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13432,
+  "duration": 7177680,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12316,
+  "duration": 67548,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11381,
+  "duration": 114383,
   "status": "passed"
 });
 formatter.scenario({
@@ -2156,8 +2155,8 @@ formatter.match({
   "location": "CalculoFreteSteps.o_numero_de_produtos(int)"
 });
 formatter.result({
-  "duration": 1837417,
-  "error_message": "java.lang.AssertionError: expected:\u003c2\u003e but was:\u003c0\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:555)\n\tat org.junit.Assert.assertEquals(Assert.java:542)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:64)\n\tat ✽.Given o numero de produtos: 02(features/CalculoFrete.feature:10)\n",
+  "duration": 419412,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.o_numero_de_produtos(CalculoFreteSteps.java:65)\n\tat ✽.Given o numero de produtos: 02(features/CalculoFrete.feature:10)\n",
   "status": "failed"
 });
 formatter.match({
@@ -2213,19 +2212,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 24232,
+  "duration": 113476,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12990,
+  "duration": 45244,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12026,
+  "duration": 102588,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18235,
+  "duration": 31254,
   "status": "passed"
 });
 formatter.scenario({
@@ -2374,19 +2373,19 @@ formatter.result({
   "status": "undefined"
 });
 formatter.before({
-  "duration": 25643,
+  "duration": 60513,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12748,
+  "duration": 28030,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12509,
+  "duration": 60807,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11163,
+  "duration": 59336,
   "status": "passed"
 });
 formatter.scenario({
@@ -2421,26 +2420,29 @@ formatter.match({
   "location": "CalculoFreteSteps.sistema_tem_acesso_aos_Correios()"
 });
 formatter.result({
-  "duration": 1185338,
-  "error_message": "java.lang.AssertionError\n\tat org.junit.Assert.fail(Assert.java:86)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertTrue(Assert.java:52)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_tem_acesso_aos_Correios(CalculoFreteSteps.java:163)\n\tat ✽.Given Sistema tem acesso aos Correios(features/CalculoFrete.feature:36)\n",
-  "status": "failed"
+  "duration": 597900180,
+  "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.correios_retorna_prazo_de_entrega()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 86543,
+  "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.valor_do_frete()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 121378,
+  "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.valores_sao_armazenados_no_sistema()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 509981,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.valores_sao_armazenados_no_sistema(CalculoFreteSteps.java:189)\n\tat ✽.Then valores sao armazenados no sistema(features/CalculoFrete.feature:39)\n",
+  "status": "failed"
 });
 });
