@@ -12,7 +12,6 @@ public class Correios {
 	private String mensagemErro;
 	private Double valorFrete;
 	private int prazoEntrega;
-	
 	private DadosDeEntregaDAO dao;
 	
 	public Correios(DadosDeEntregaDAO dao) {

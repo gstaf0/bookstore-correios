@@ -125,12 +125,12 @@ public class CalculoFreteSteps {
 
 	@Given("^CEP de origem --$")
 	public void cep_de_origem() throws Throwable {
-		pedido.setCepOrig(null);
+		pedido.setCepOrig(12900000);
 	}
 
 	@Given("^CEP de destino --$")
 	public void cep_de_destino() throws Throwable {
-		pedido.setCepDest(null);
+		pedido.setCepDest(13083000);
 	}
 
 	@When("^sistema solicita o calculo do frete$")

@@ -13,8 +13,8 @@ public class Pedido {
 	private Double largura;
 	private Double altura;
 	private Double comprimento;
-	private Integer cepOrig;
-	private Integer cepDest;
+	private long cepOrig;
+	private long cepDest;
 	private String tipoEntrega;
 	private String endereco;
 	
@@ -30,16 +30,16 @@ public class Pedido {
 	public void setTipoEntrega(String arg) {
 		tipoEntrega = arg;
 	}
-	public Integer getCepDest() {
+	public long getCepDest() {
 		return cepDest;
 	}
-	public Integer getCepOrig() {
+	public long getCepOrig() {
 		return cepOrig;
 	}
-	public void setCepDest(Integer arg) {
+	public void setCepDest(long arg) {
 		this.cepDest = arg;
 	}
-	public void setCepOrig(Integer arg) {
+	public void setCepOrig(long arg) {
 		this.cepOrig = arg;
 	}
 	public Double getPeso() {
