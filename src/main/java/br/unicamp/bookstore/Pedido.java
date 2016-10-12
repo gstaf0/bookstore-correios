@@ -7,7 +7,7 @@ public class Pedido {
 	
 	private int rastreamentoCodigo;
 	private String statusEntrega;
-	private Date prazoEntrega;
+	private String prazoEntrega;
 	
 	private Double peso;
 	private Double largura;
@@ -83,11 +83,11 @@ public class Pedido {
 		this.statusEntrega = statusEntrega;
 	}
 	
-	public Date getPrazoEntrega() {
+	public String getPrazoEntrega() {
 		return prazoEntrega;
 	}
 	
-	public void setPrazoEntrega(Date prazoEntrega) {
+	public void setPrazoEntrega(String prazoEntrega) {
 		this.prazoEntrega = prazoEntrega;
 	}
 
