@@ -93,26 +93,11 @@ public class CalculoFreteSteps {
 		pedido.setComprimento(arg1);
 	}
 
-	@Given("^tipo de entrega: PAC,$")
-	public void tipo_de_entrega_PAC() throws Throwable {
-		pedido.setTipoEntrega("PAC");
+	@Given("^tipo de entrega: \"([^\"]*)\",$")
+	public void tipo_de_entrega(String arg1) throws Throwable {
+		pedido.setTipoEntrega(arg1);
 	}
-
-	@Given("^tipo de entrega: SEDEX,$")
-	public void tipo_de_entrega_SEDEX() throws Throwable {
-		pedido.setTipoEntrega("SEDEX");
-	}
-
-	@Given("^tipo de entrega: SEDEX(\\d+),$")
-	public void tipo_de_entrega_SEDEX(int arg1) throws Throwable {
-		pedido.setTipoEntrega("SEDEX10");
-	}
-
-	@Given("^tipo de entrega: --,$")
-	public void tipo_de_entrega() throws Throwable {
-		pedido.setTipoEntrega("--");
-	}
-
+	
 	@Given("^CEP de origem (\\d+)$")
 	public void cep_de_origem(int arg1) throws Throwable {
 		pedido.setCepOrig(arg1);
@@ -123,14 +108,14 @@ public class CalculoFreteSteps {
 		pedido.setCepDest(arg1);
 	}
 
-	@Given("^CEP de origem --$")
-	public void cep_de_origem() throws Throwable {
-		pedido.setCepOrig(12900000);
+	@Given("^CEP de origem $")
+	public void cep_de_origem() throws Throwable {		
+		pedido.setCepOrig("");
 	}
 
-	@Given("^CEP de destino --$")
+	@Given("^CEP de destino $")
 	public void cep_de_destino() throws Throwable {
-		pedido.setCepDest(13083000);
+		pedido.setCepDest("");
 	}
 
 	@When("^sistema solicita o calculo do frete$")
@@ -147,10 +132,11 @@ public class CalculoFreteSteps {
 	public void sistema_verifica_a_validade_dos_dados() throws Throwable {
 		assertTrue(correios.validarDados());
 	}
-
-	@Then("^retorna valor do frete: (\\d+.\\d+)$")
-	public void retorna_valor_do_frete(Double arg1) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete());
+	
+	@Then("^retorna valor do frete: \"([^\"]*)\",$")
+	public void retorna_valor_do_frete(String arg1) throws Throwable {
+		Double v = Double.parseDouble(arg1);
+		assertEquals(v, correios.getValorFrete());
 	}
 
 	@Then("^retorna valor do frete: --,$")
@@ -163,48 +149,13 @@ public class CalculoFreteSteps {
 		assertEquals(arg1,correios.getPrazoEntrega());
 	}
 
-	@Then("^prazo de entrega: --$")
+	@Then("^prazo de entrega: $")
 	public void prazo_de_entrega() throws Throwable {
 		assertEquals("",correios.getPrazoEntrega());
 	}
 
-	@Then("^eventual mensagem de erro: (\\d+): Processamento com Sucesso$")
-	public void eventual_mensagem_de_erro_Processamento_com_Sucesso(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): Peso excedido$")
-	public void eventual_mensagem_de_erro_Peso_excedido(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): Largura Invalida$")
-	public void eventual_mensagem_de_erro_Largura_Invalida(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): Altura Invalida$")
-	public void eventual_mensagem_de_erro_Altura_Invalida(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): Comprimento Invalida$")
-	public void eventual_mensagem_de_erro_Comprimento_Invalida(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): CEP Origem Invalido$")
-	public void eventual_mensagem_de_erro_CEP_Origem_Invalido(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: -(\\d+): CEP Destino Invalido$")
-	public void eventual_mensagem_de_erro_CEP_Destino_Invalido(int arg1) throws Throwable {
-
-	}
-
-	@Then("^eventual mensagem de erro: --$")
-	public void eventual_mensagem_de_erro() throws Throwable {
+	@Then("^eventual mensagem de erro: \"([^\"]*)\"$")
+	public void eventual_mensagem_de_erro(String arg1) throws Throwable {
 
 	}
 
@@ -233,7 +184,7 @@ public class CalculoFreteSteps {
 
 
 
-
+	//******************************************************************************************
 	@Given("^o SEDEX$")
 	public void o_SEDEX() throws Throwable {
 		//assertEquals("SEDEX", correios.getTipoEntrega());
@@ -287,6 +238,10 @@ public class CalculoFreteSteps {
 		assertEquals("-3: CEP Destino Invalido", correios.getMensagemErro());
 	}
 
+	
+	
+	
+	//************************************************************************************
 	@Given("^Sistema tem acesso aos Correios$")
 	public void sistema_tem_acesso_aos_Correios() throws Throwable {
 		//  create mock

@@ -41,7 +41,7 @@ public class Pedido {
 	}
 	public void setCepOrig(long arg) {
 		this.cepOrig = arg;
-	}
+	}	
 	public Double getPeso() {
 		return peso;
 	}
@@ -89,6 +89,27 @@ public class Pedido {
 	
 	public void setPrazoEntrega(String prazoEntrega) {
 		this.prazoEntrega = prazoEntrega;
+	}
+	
+	public void setCepDest(String arg) {
+		long value = -1;
+		try{
+			value = Long.parseLong(arg);
+		}catch(NumberFormatException e) {
+			value = -1;
+		} finally {
+			this.cepDest = value;
+		}
+	}
+	public void setCepOrig(String arg) {		
+		long value = -1;
+		try{
+			value = Long.parseLong(arg);
+		}catch(NumberFormatException e) {
+			value = -1;
+		} finally {
+			this.cepOrig = value;
+		}
 	}
 
 }

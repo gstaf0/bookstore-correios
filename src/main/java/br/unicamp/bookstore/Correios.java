@@ -80,6 +80,4 @@ public class Correios {
 	public void estimarPrazoEntrega() {
 		
 	}
-	
-
 }
