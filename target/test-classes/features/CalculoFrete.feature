@@ -37,7 +37,7 @@ Scenario Outline: envio de dados do produto
 		|  80  |    90   |   15   |      15	    |    SEDEX    | 129122200 |  13083000  |   13       |      03      | -12: Comprimento Invalida    |
 		|  80  |    90   |   15   |      80	    |    SEDEX    | 929122200 |  13083000  |   13       |      03      | -2: CEP Origem Invalido      |
 		|  80  |    90   |   15   |      80	    |    SEDEX    | 129122200 |  13083999  |   13       |      03      | -3: CEP Destino Invalido     |
-		| 110  |    20   |   12   |      40	    |      --     |     --    |     --     |     --     |      --      |             --               |
+		| 110  |    20   |   12   |      40	    |      --     |     --    |     --     |   --       |      --      |             --               |
 		| 130  |    33   |    8   |     120	    |    SEDEX    | 129122200 |  13083000  |   14       |      07      | 0: Processamento com Sucesso |
 
 Scenario: Armazena dados de entrega no sistema
