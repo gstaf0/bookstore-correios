@@ -12,6 +12,7 @@ public class Correios {
 	private String mensagemErro;
 	private Double valorFrete;
 	private int prazoEntrega;
+	private String enderecoEntrega;
 	private DadosDeEntregaDAO dao;
 	
 	public Correios(DadosDeEntregaDAO dao) {
@@ -40,6 +41,10 @@ public class Correios {
 		return prazoEntrega;
 	}
 	
+	public String getEnderecoEntrega(long cep) {
+		return enderecoEntrega;
+	}
+	
 	public void setApiUp(boolean apiUp) {
 		this.apiUp = apiUp;
 	}
@@ -51,10 +56,15 @@ public class Correios {
 	public void setValorFrete(Double valorFrete) {
 		this.valorFrete = valorFrete;
 	}
-
+	
 	public void setPrazoEntrega(int prazoEntrega) {
 		this.prazoEntrega = prazoEntrega;
 	}
+
+	public void setEnderecoEntrega(String enderecoEntrega, long cep) {
+		this.enderecoEntrega = enderecoEntrega;
+	}
+
 	
 	public void salvarInformacoes(Double valorFrete, Integer diasEntrega) {
 		dao.saveDadosDeEntrega(valorFrete, diasEntrega);

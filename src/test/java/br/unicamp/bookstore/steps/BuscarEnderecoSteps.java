@@ -5,7 +5,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import static org.mockito.Mockito.mock;
-import br.unicamp.bookstore.Cliente;
+import static org.mockito.Mockito.when;
 import br.unicamp.bookstore.Pedido;
 import br.unicamp.bookstore.Correios;
 import br.unicamp.bookstore.dao.DadosDeEntregaDAO;
@@ -16,7 +16,6 @@ import cucumber.api.java.en.When;
 
 public class BuscarEnderecoSteps {
 	
-	private Cliente cliente;
 	private Pedido pedido;
 	private Correios correios;
 	private DadosDeEntregaDAO saveDados;
@@ -41,15 +40,19 @@ public class BuscarEnderecoSteps {
 	@Then("^o sistema recebe o endereco fornecido pelos correios Avenida Doutor Luis de Tella, Barão Geraldo, Campinas$")
 	public void o_sistema_recebe_o_endereco_fornecido_pelos_correios_Avenida_Doutor_Luis_de_Tella_Barão_Geraldo_Campinas() throws Throwable {
 		assertTrue(correios.getApiUp());
-		//assertEquals("Avenida Doutor Luis de Tella, Barão Geraldo, Campinas", cliente.getCep());
 		assertEquals(13083000, pedido.getCepDest());
+		Correios endEntrega = mock(Correios.class);
+	    when(endEntrega.getEnderecoEntrega(13083000)).thenReturn("Avenida Doutor Luis de Tella, Barão Geraldo, Campinas");
+	    assertEquals("Avenida Doutor Luis de Tella, Barão Geraldo, Campinas", endEntrega.getEnderecoEntrega(13083000));
 	}
 
 	@Then("^o sistema recebe o endereco fornecido pelos correios Rua da Abolicao, Ponte Preta, Campinas$")
 	public void o_sistema_recebe_o_endereco_fornecido_pelos_correios_Rua_da_Abolicao_Ponte_Preta_Campinas() throws Throwable {
 		assertTrue(correios.getApiUp());
-		//assertEquals("Rua da Abolicao, Ponte Preta, Campinas", cliente.getCep());
 		assertEquals(13041445, pedido.getCepDest());
+	    Correios endEntrega = mock(Correios.class);
+	    when(endEntrega.getEnderecoEntrega(13041445)).thenReturn("Rua da Abolicao, Ponte Preta, Campinas");
+	    assertEquals("Rua da Abolicao, Ponte Preta, Campinas", endEntrega.getEnderecoEntrega(13041445));
 	}
 
 	@Given("^o sistema não está com acesso aos correios$")

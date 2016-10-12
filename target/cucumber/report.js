@@ -63,19 +63,19 @@ formatter.examples({
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 870212,
+  "duration": 1091900,
   "status": "passed"
 });
 formatter.before({
-  "duration": 67156,
+  "duration": 105001,
   "status": "passed"
 });
 formatter.before({
-  "duration": 53452,
+  "duration": 103205,
   "status": "passed"
 });
 formatter.before({
-  "duration": 63973,
+  "duration": 87127,
   "status": "passed"
 });
 formatter.scenario({
@@ -111,7 +111,7 @@ formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_está_com_acesso_aos_correios()"
 });
 formatter.result({
-  "duration": 265286539,
+  "duration": 322701166,
   "status": "passed"
 });
 formatter.match({
@@ -124,30 +124,30 @@ formatter.match({
   "location": "BuscarEnderecoSteps.o_cliente_preencheu_o_CEP_do_endereco_de_entrega(int)"
 });
 formatter.result({
-  "duration": 4423670,
+  "duration": 3606228,
   "status": "passed"
 });
 formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_recebe_o_endereco_fornecido_pelos_correios_Avenida_Doutor_Luis_de_Tella_Barão_Geraldo_Campinas()"
 });
 formatter.result({
-  "duration": 1770115,
+  "duration": 45902074,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43469,
+  "duration": 57581,
   "status": "passed"
 });
 formatter.before({
-  "duration": 40002,
+  "duration": 60491,
   "status": "passed"
 });
 formatter.before({
-  "duration": 39723,
+  "duration": 42662,
   "status": "passed"
 });
 formatter.before({
-  "duration": 37385,
+  "duration": 59228,
   "status": "passed"
 });
 formatter.scenario({
@@ -183,7 +183,7 @@ formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_está_com_acesso_aos_correios()"
 });
 formatter.result({
-  "duration": 300565,
+  "duration": 363418,
   "status": "passed"
 });
 formatter.match({
@@ -196,30 +196,30 @@ formatter.match({
   "location": "BuscarEnderecoSteps.o_cliente_preencheu_o_CEP_do_endereco_de_entrega(int)"
 });
 formatter.result({
-  "duration": 172235,
+  "duration": 158972,
   "status": "passed"
 });
 formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_recebe_o_endereco_fornecido_pelos_correios_Rua_da_Abolicao_Ponte_Preta_Campinas()"
 });
 formatter.result({
-  "duration": 61869,
+  "duration": 516481,
   "status": "passed"
 });
 formatter.before({
-  "duration": 50358,
+  "duration": 111916,
   "status": "passed"
 });
 formatter.before({
-  "duration": 44026,
+  "duration": 472677,
   "status": "passed"
 });
 formatter.before({
-  "duration": 35265,
+  "duration": 52634,
   "status": "passed"
 });
 formatter.before({
-  "duration": 43849,
+  "duration": 54319,
   "status": "passed"
 });
 formatter.scenario({
@@ -249,21 +249,21 @@ formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_não_está_com_acesso_aos_correios()"
 });
 formatter.result({
-  "duration": 333959,
+  "duration": 263524,
   "status": "passed"
 });
 formatter.match({
   "location": "BuscarEnderecoSteps.o_cliente_preencheu_o_CEP_do_endereco_de_entrega()"
 });
 formatter.result({
-  "duration": 47779,
+  "duration": 42877,
   "status": "passed"
 });
 formatter.match({
   "location": "BuscarEnderecoSteps.o_sistema_informa_um_erro_de_falha_de_acesso()"
 });
 formatter.result({
-  "duration": 106873,
+  "duration": 109341,
   "status": "passed"
 });
 });
