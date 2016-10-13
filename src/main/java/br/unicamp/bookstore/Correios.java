@@ -65,7 +65,6 @@ public class Correios {
 		this.enderecoEntrega = enderecoEntrega;
 	}
 
-	
 	public void salvarInformacoes(Double valorFrete, Integer diasEntrega) {
 		dao.saveDadosDeEntrega(valorFrete, diasEntrega);
 	}
@@ -77,6 +76,7 @@ public class Correios {
 	public void calcularFrete() {
 		
 	}
+	
 	public void estimarPrazoEntrega() {
 		
 	}

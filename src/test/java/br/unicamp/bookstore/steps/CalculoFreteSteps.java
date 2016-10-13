@@ -1,11 +1,16 @@
 package br.unicamp.bookstore.steps;
 
+import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
+import static com.github.tomakehurst.wiremock.client.WireMock.get;
+import static com.github.tomakehurst.wiremock.client.WireMock.urlEqualTo;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Assert;
+
+import com.github.tomakehurst.wiremock.client.WireMock;
 
 import br.unicamp.bookstore.Cliente;
 import br.unicamp.bookstore.Pedido;
@@ -120,6 +125,12 @@ public class CalculoFreteSteps {
 
 	@When("^sistema solicita o calculo do frete$")
 	public void sistema_solicita_o_calculo_do_frete() throws Throwable {
+		
+	    WireMock.stubFor(get(urlEqualTo("/test"))
+	            .willReturn(aResponse()
+	                .withHeader("Content-Type", "text/plain")
+	                .withBody("Hello world!")));
+	    
 		correios.calcularFrete();
 	}
 
