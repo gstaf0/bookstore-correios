@@ -8,9 +8,16 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Assert;
 
 import com.github.tomakehurst.wiremock.client.WireMock;
+import com.github.tomakehurst.wiremock.http.Request;
+import com.github.tomakehurst.wiremock.http.RequestListener;
+import com.github.tomakehurst.wiremock.http.Response;
+import com.github.tomakehurst.wiremock.verification.LoggedRequest;
 
 import br.unicamp.bookstore.Cliente;
 import br.unicamp.bookstore.Pedido;
@@ -69,7 +76,7 @@ public class CalculoFreteSteps {
 	public void existe_ao_menos_um_pedido_no_carrinho() throws Throwable {
 		pedido = new Pedido();
 	}
-	
+
 	@Given("^servico dos correios esta operacional$")
 	public void servico_dos_correios_esta_operacional() throws Throwable {
 		// Correio's create mock
@@ -102,7 +109,7 @@ public class CalculoFreteSteps {
 	public void tipo_de_entrega(String arg1) throws Throwable {
 		pedido.setTipoEntrega(arg1);
 	}
-	
+
 	@Given("^CEP de origem (\\d+)$")
 	public void cep_de_origem(int arg1) throws Throwable {
 		pedido.setCepOrig(arg1);
@@ -125,13 +132,27 @@ public class CalculoFreteSteps {
 
 	@When("^sistema solicita o calculo do frete$")
 	public void sistema_solicita_o_calculo_do_frete() throws Throwable {
-		
-	    WireMock.stubFor(get(urlEqualTo("/test"))
-	            .willReturn(aResponse()
-	                .withHeader("Content-Type", "text/plain")
-	                .withBody("Hello world!")));
-	    
-		correios.calcularFrete();
+
+		Double peso = pedido.getPeso();
+		Double largura = pedido.getLargura();
+		Double altura = pedido.getAltura();
+		Double comprimento = pedido.getComprimento();
+		String tipoEntrega = pedido.getTipoEntrega();
+		Long cepOrig = pedido.getCepOrig();
+		Long cepDest = pedido.getCepDest();
+
+		WireMock.stubFor(get(urlEqualTo("/calcularFrete?peso="+peso+"&"
+		+"largura="+largura+"&"
+		+"altura="+altura+"&"
+		+"comprimento="+comprimento+"&"
+		+"tipoEntrega="+tipoEntrega+"&"
+		+"cepOrig="+cepOrig.toString()+"&"
+		+"cepDest="+cepDest))
+				.willReturn(aResponse()
+						.withHeader("Content-Type", "text/plain")
+						.withBody("hjjkkkjh").withBody("aloooooooo")));
+
+		correios.calcularFrete(pedido);
 	}
 
 	@When("^tempo de entrega$")
@@ -143,14 +164,14 @@ public class CalculoFreteSteps {
 	public void sistema_verifica_a_validade_dos_dados() throws Throwable {
 		assertTrue(correios.validarDados());
 	}
-	
+
 	@Then("^retorna valor do frete: \"([^\"]*)\",$")
 	public void retorna_valor_do_frete(String arg1) throws Throwable {
 		Double v = Double.parseDouble(arg1);
 		assertEquals(v, correios.getValorFrete());
 	}
 
-	@Then("^retorna valor do frete: --,$")
+	@Then("^retorna valor do frete: $")
 	public void retorna_valor_do_frete() throws Throwable {
 		assertEquals("", correios.getValorFrete());
 	}
@@ -249,9 +270,9 @@ public class CalculoFreteSteps {
 		assertEquals("-3: CEP Destino Invalido", correios.getMensagemErro());
 	}
 
-	
-	
-	
+
+
+
 	//************************************************************************************
 	@Given("^Sistema tem acesso aos Correios$")
 	public void sistema_tem_acesso_aos_Correios() throws Throwable {

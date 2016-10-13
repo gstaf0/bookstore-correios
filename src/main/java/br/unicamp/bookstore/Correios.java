@@ -1,7 +1,20 @@
 package br.unicamp.bookstore;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Scanner;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.client.utils.URIBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 
 import br.unicamp.bookstore.dao.DadosDeEntregaDAO;
 
@@ -73,8 +86,43 @@ public class Correios {
 		return true;
 	}
 	
-	public void calcularFrete() {
+	public void calcularFrete(Pedido pedido) throws ClientProtocolException, IOException, URISyntaxException {
 		
+		Double peso = pedido.getPeso();
+		Double largura = pedido.getLargura();
+		Double altura = pedido.getAltura();
+		Double comprimento = pedido.getComprimento();
+		String tipoEntrega = pedido.getTipoEntrega();
+		Long cepOrig = pedido.getCepOrig();
+		Long cepDest = pedido.getCepDest();
+		
+		URIBuilder builder = new URIBuilder();
+		builder.setScheme("http").setHost("localhost").setPort(8080).setPath("/calcularFrete")
+		    .addParameter("peso",peso.toString())
+		    .addParameter("largura",largura.toString())
+		    .addParameter("altura",altura.toString())
+		    .addParameter("comprimento",comprimento.toString())
+		    .addParameter("tipoEntrega",tipoEntrega)
+		    .addParameter("cepOrig",cepOrig.toString())
+		    .addParameter("cepDest",cepDest.toString());
+		
+		URI uri = builder.build();
+		HttpGet httpget = new HttpGet(uri);
+		System.out.println(httpget.getURI());
+		
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		HttpResponse httpResponse = httpClient.execute(httpget);
+		String responseString = convertResponseToString(httpResponse);
+		
+		System.out.println(responseString);
+	}
+	
+	private String convertResponseToString(HttpResponse response) throws IOException {
+	    InputStream responseStream = response.getEntity().getContent();
+	    Scanner scanner = new Scanner(responseStream, "UTF-8");
+	    String responseString = scanner.useDelimiter("\\Z").next();
+	    scanner.close();
+	    return responseString;
 	}
 	
 	public void estimarPrazoEntrega() {

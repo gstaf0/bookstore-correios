@@ -26,8 +26,8 @@ public class RunCalculoFrete {
 	
 	@BeforeClass
 	public static void runBeforeClass(){
-		WireMockServer wireMockServer = new WireMockServer(wireMockConfig().port(8089)); //No-args constructor will start on port 8080, no HTTPS
-		WireMock.configureFor(8089);
+		WireMockServer wireMockServer = new WireMockServer(wireMockConfig().port(8080)); //No-args constructor will start on port 8080, no HTTPS
+		WireMock.configureFor(8080);
 		wireMockServer.start();
 	}
 	
