@@ -7,19 +7,19 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 1007998,
+  "duration": 729462,
   "status": "passed"
 });
 formatter.before({
-  "duration": 134388,
+  "duration": 64950,
   "status": "passed"
 });
 formatter.before({
-  "duration": 97123,
+  "duration": 73023,
   "status": "passed"
 });
 formatter.before({
-  "duration": 113217,
+  "duration": 61051,
   "status": "passed"
 });
 formatter.scenario({
@@ -54,28 +54,28 @@ formatter.match({
   "location": "CalculoFreteSteps.o_cliente_adicionou_ao_menos_um_produto_ao_carrinho_de_compras()"
 });
 formatter.result({
-  "duration": 421359884,
+  "duration": 439104841,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.o_cliente_preenche_o_CEP_do_endereco_de_entrega()"
 });
 formatter.result({
-  "duration": 42557,
+  "duration": 43088,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.o_sistema_se_conecta_ao_servico_dos_Correios()"
 });
 formatter.result({
-  "duration": 3076353,
+  "duration": 1753394,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.verifica_se_a_API_esta_online()"
 });
 formatter.result({
-  "duration": 44189,
+  "duration": 44694,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -143,32 +143,27 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \u003cvalorFrete\u003e,",
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \u003cvalorFrete\u003e,",
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \u003cprazoEntrega\u003e",
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \u003cmensagemRetorno\u003e",
   "keyword": "And "
 });
 formatter.examples({
   "comments": [
     {
-      "line": 27,
+      "line": 26,
       "value": "# TODO: Completar essa tabela com mais casos de uso."
     }
   ],
-  "line": 28,
+  "line": 27,
   "name": "",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;",
@@ -186,7 +181,7 @@ formatter.examples({
         "prazoEntrega",
         "mensagemRetorno"
       ],
-      "line": 29,
+      "line": 28,
       "id": "calcular-frete;envio-de-dados-do-produto;;1"
     },
     {
@@ -202,7 +197,7 @@ formatter.examples({
         "\"7\"",
         "\"Processamento com Sucesso\""
       ],
-      "line": 30,
+      "line": 29,
       "id": "calcular-frete;envio-de-dados-do-produto;;2"
     },
     {
@@ -218,7 +213,7 @@ formatter.examples({
         "\"3\"",
         "\"Processamento com Sucesso\""
       ],
-      "line": 31,
+      "line": 30,
       "id": "calcular-frete;envio-de-dados-do-produto;;3"
     },
     {
@@ -234,7 +229,7 @@ formatter.examples({
         "\"1\"",
         "\"Processamento com Sucesso\""
       ],
-      "line": 32,
+      "line": 31,
       "id": "calcular-frete;envio-de-dados-do-produto;;4"
     },
     {
@@ -246,11 +241,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"13.87\"",
+        "\"15.40\"",
         "\"3\"",
         "\"Processamento com Sucesso\""
       ],
-      "line": 33,
+      "line": 32,
       "id": "calcular-frete;envio-de-dados-do-produto;;5"
     },
     {
@@ -262,11 +257,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"14.55\"",
-        "\"7\"",
+        "\"15.40\"",
+        "\"3\"",
         "\"Processamento com Sucesso\""
       ],
-      "line": 34,
+      "line": 33,
       "id": "calcular-frete;envio-de-dados-do-produto;;6"
     },
     {
@@ -278,11 +273,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"13.87\"",
-        "\"3\"",
+        "\"\"",
+        "\"\"",
         "\"Peso excedido\""
       ],
-      "line": 35,
+      "line": 34,
       "id": "calcular-frete;envio-de-dados-do-produto;;7"
     },
     {
@@ -294,11 +289,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"13.87\"",
-        "\"3\"",
+        "\"\"",
+        "\"\"",
         "\"Largura Invalida\""
       ],
-      "line": 36,
+      "line": 35,
       "id": "calcular-frete;envio-de-dados-do-produto;;8"
     },
     {
@@ -310,11 +305,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"13.87\"",
-        "\"3\"",
+        "\"\"",
+        "\"\"",
         "\"Altura Invalida\""
       ],
-      "line": 37,
+      "line": 36,
       "id": "calcular-frete;envio-de-dados-do-produto;;9"
     },
     {
@@ -322,15 +317,15 @@ formatter.examples({
         "80",
         "90",
         "15",
-        "15",
+        "130",
         "\"SEDEX\"",
         "129122200",
         "13083000",
-        "\"13.87\"",
-        "\"3\"",
-        "\"Comprimento Invalida\""
+        "\"\"",
+        "\"\"",
+        "\"Comprimento Invalido\""
       ],
-      "line": 38,
+      "line": 37,
       "id": "calcular-frete;envio-de-dados-do-produto;;10"
     },
     {
@@ -342,11 +337,11 @@ formatter.examples({
         "\"SEDEX\"",
         "929122200",
         "13083000",
-        "\"13.87\"",
-        "\"3\"",
+        "\"\"",
+        "\"\"",
         "\"CEP Origem Invalido\""
       ],
-      "line": 39,
+      "line": 38,
       "id": "calcular-frete;envio-de-dados-do-produto;;11"
     },
     {
@@ -358,11 +353,11 @@ formatter.examples({
         "\"SEDEX\"",
         "129122200",
         "13083999",
-        "\"13.87\"",
-        "\"3\"",
+        "\"\"",
+        "\"\"",
         "\"CEP Destino Invalido\""
       ],
-      "line": 40,
+      "line": 39,
       "id": "calcular-frete;envio-de-dados-do-produto;;12"
     },
     {
@@ -378,30 +373,30 @@ formatter.examples({
         "\"\"",
         "\"Alguns campos não foram preenchidos\""
       ],
-      "line": 41,
+      "line": 40,
       "id": "calcular-frete;envio-de-dados-do-produto;;13"
     }
   ],
   "keyword": "Examples"
 });
 formatter.before({
-  "duration": 51053,
+  "duration": 30980,
   "status": "passed"
 });
 formatter.before({
-  "duration": 42301,
+  "duration": 20334,
   "status": "passed"
 });
 formatter.before({
-  "duration": 30944,
+  "duration": 14767,
   "status": "passed"
 });
 formatter.before({
-  "duration": 38881,
+  "duration": 20735,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 30,
+  "line": 29,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;2",
@@ -486,19 +481,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"4.10\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"4.10\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \"7\"",
   "matchedColumns": [
     8
@@ -506,7 +496,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Processamento com Sucesso\"",
   "matchedColumns": [
     9
@@ -517,14 +507,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 100804,
+  "duration": 31947,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 360120,
+  "duration": 203717,
   "status": "passed"
 });
 formatter.match({
@@ -537,7 +527,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 2335544,
+  "duration": 2154017,
   "status": "passed"
 });
 formatter.match({
@@ -550,7 +540,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 157780,
+  "duration": 141407,
   "status": "passed"
 });
 formatter.match({
@@ -563,7 +553,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 289766,
+  "duration": 114788,
   "status": "passed"
 });
 formatter.match({
@@ -576,7 +566,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 190155,
+  "duration": 147707,
   "status": "passed"
 });
 formatter.match({
@@ -589,7 +579,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 2097601,
+  "duration": 1241217,
   "status": "passed"
 });
 formatter.match({
@@ -602,7 +592,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 1087882,
+  "duration": 820446,
   "status": "passed"
 });
 formatter.match({
@@ -615,43 +605,35 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 137454,
+  "duration": 173084,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 918074468,
+  "duration": 834994031,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 154623,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 87382,
+  "duration": 29001746,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "4.10",
-      "offset": 25
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 1019618,
-  "error_message": "java.lang.AssertionError: expected:\u003c4.1\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"4.10\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "duration": 183270,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -663,7 +645,8 @@ formatter.match({
   "location": "CalculoFreteSteps.prazo_de_entrega(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 169332,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -675,26 +658,27 @@ formatter.match({
   "location": "CalculoFreteSteps.eventual_mensagem_de_erro(String)"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.before({
-  "duration": 87850,
+  "duration": 88349,
   "status": "passed"
 });
 formatter.before({
-  "duration": 24936,
+  "duration": 35721,
   "status": "passed"
 });
 formatter.before({
-  "duration": 27822,
+  "duration": 26496,
   "status": "passed"
 });
 formatter.before({
-  "duration": 15980,
+  "duration": 16608,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 23348,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 31,
+  "line": 30,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;3",
@@ -779,19 +763,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"15.40\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"15.40\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \"3\"",
   "matchedColumns": [
     8
@@ -799,7 +778,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Processamento com Sucesso\"",
   "matchedColumns": [
     9
@@ -810,14 +789,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 25425,
+  "duration": 26843,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 159655,
+  "duration": 388536,
   "status": "passed"
 });
 formatter.match({
@@ -830,7 +809,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 134763,
+  "duration": 100005,
   "status": "passed"
 });
 formatter.match({
@@ -843,7 +822,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 80058,
+  "duration": 115278,
   "status": "passed"
 });
 formatter.match({
@@ -856,7 +835,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 182849,
+  "duration": 183515,
   "status": "passed"
 });
 formatter.match({
@@ -869,7 +848,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 78462,
+  "duration": 158011,
   "status": "passed"
 });
 formatter.match({
@@ -882,7 +861,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 63639,
+  "duration": 254693,
   "status": "passed"
 });
 formatter.match({
@@ -895,7 +874,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 115854,
+  "duration": 182601,
   "status": "passed"
 });
 formatter.match({
@@ -908,43 +887,34 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 159635,
+  "duration": 124484,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 51802561,
-  "status": "passed"
+  "duration": 1025933,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 486439,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 43646,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
       "val": "15.40",
-      "offset": 25
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 433232,
-  "error_message": "java.lang.AssertionError: expected:\u003c15.4\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"15.40\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -971,23 +941,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 58746,
+  "duration": 49667,
   "status": "passed"
 });
 formatter.before({
-  "duration": 67565,
+  "duration": 37262,
   "status": "passed"
 });
 formatter.before({
-  "duration": 40537,
+  "duration": 35488,
   "status": "passed"
 });
 formatter.before({
-  "duration": 54146,
+  "duration": 48664,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 32,
+  "line": 31,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;4",
@@ -1072,19 +1042,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"33.33\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"33.33\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \"1\"",
   "matchedColumns": [
     8
@@ -1092,7 +1057,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Processamento com Sucesso\"",
   "matchedColumns": [
     9
@@ -1103,14 +1068,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 68227,
+  "duration": 85834,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 449612,
+  "duration": 258497,
   "status": "passed"
 });
 formatter.match({
@@ -1123,7 +1088,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 114140,
+  "duration": 95263,
   "status": "passed"
 });
 formatter.match({
@@ -1136,7 +1101,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 163159,
+  "duration": 85145,
   "status": "passed"
 });
 formatter.match({
@@ -1149,7 +1114,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 93821,
+  "duration": 207273,
   "status": "passed"
 });
 formatter.match({
@@ -1162,7 +1127,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 146546,
+  "duration": 78612,
   "status": "passed"
 });
 formatter.match({
@@ -1175,7 +1140,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 74423,
+  "duration": 59131,
   "status": "passed"
 });
 formatter.match({
@@ -1188,7 +1153,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 136837,
+  "duration": 79052,
   "status": "passed"
 });
 formatter.match({
@@ -1201,43 +1166,35 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 150962,
+  "duration": 92139,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 74975951,
+  "duration": 22997561,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 29959,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 29075,
+  "duration": 70318654,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
       "val": "33.33",
-      "offset": 25
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 356319,
-  "error_message": "java.lang.AssertionError: expected:\u003c33.33\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"33.33\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "duration": 199358,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1249,7 +1206,8 @@ formatter.match({
   "location": "CalculoFreteSteps.prazo_de_entrega(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 435934,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1261,26 +1219,27 @@ formatter.match({
   "location": "CalculoFreteSteps.eventual_mensagem_de_erro(String)"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.before({
-  "duration": 39172,
+  "duration": 133129,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18700,
+  "duration": 40138,
   "status": "passed"
 });
 formatter.before({
-  "duration": 1901603,
+  "duration": 44027,
   "status": "passed"
 });
 formatter.before({
-  "duration": 66547,
+  "duration": 56299,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 96273,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 33,
+  "line": 32,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;5",
@@ -1365,19 +1324,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"15.40\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \"3\"",
   "matchedColumns": [
     8
@@ -1385,7 +1339,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Processamento com Sucesso\"",
   "matchedColumns": [
     9
@@ -1396,14 +1350,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 27598,
+  "duration": 43753,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 174446,
+  "duration": 240495,
   "status": "passed"
 });
 formatter.match({
@@ -1416,7 +1370,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 159101,
+  "duration": 190253,
   "status": "passed"
 });
 formatter.match({
@@ -1429,7 +1383,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 128450,
+  "duration": 120580,
   "status": "passed"
 });
 formatter.match({
@@ -1442,7 +1396,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 118561,
+  "duration": 88877,
   "status": "passed"
 });
 formatter.match({
@@ -1455,7 +1409,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 121028,
+  "duration": 115400,
   "status": "passed"
 });
 formatter.match({
@@ -1468,7 +1422,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 194368,
+  "duration": 96935,
   "status": "passed"
 });
 formatter.match({
@@ -1481,7 +1435,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 3316065,
+  "duration": 114126,
   "status": "passed"
 });
 formatter.match({
@@ -1494,43 +1448,35 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 264091,
+  "duration": 87969,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 78406736,
+  "duration": 101419713,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 45063,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 28089,
+  "duration": 59037142,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "15.40",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 304476,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "duration": 121243,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1542,7 +1488,8 @@ formatter.match({
   "location": "CalculoFreteSteps.prazo_de_entrega(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 81757,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1554,26 +1501,27 @@ formatter.match({
   "location": "CalculoFreteSteps.eventual_mensagem_de_erro(String)"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.before({
-  "duration": 28874,
+  "duration": 80813,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11725,
+  "duration": 53778,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18000,
+  "duration": 84258,
   "status": "passed"
 });
 formatter.before({
-  "duration": 10910,
+  "duration": 47791,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 45027,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 34,
+  "line": 33,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;6",
@@ -1658,27 +1606,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"15.40\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"14.55\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"7\"",
+  "name": "prazo de entrega: \"3\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Processamento com Sucesso\"",
   "matchedColumns": [
     9
@@ -1689,14 +1632,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 63665,
+  "duration": 34542,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 314447,
+  "duration": 181078,
   "status": "passed"
 });
 formatter.match({
@@ -1709,7 +1652,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 99808,
+  "duration": 140865,
   "status": "passed"
 });
 formatter.match({
@@ -1722,7 +1665,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 202234,
+  "duration": 113258,
   "status": "passed"
 });
 formatter.match({
@@ -1735,7 +1678,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 84298,
+  "duration": 102097,
   "status": "passed"
 });
 formatter.match({
@@ -1748,7 +1691,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 85976,
+  "duration": 141234,
   "status": "passed"
 });
 formatter.match({
@@ -1761,7 +1704,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 55538,
+  "duration": 153433,
   "status": "passed"
 });
 formatter.match({
@@ -1774,7 +1717,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 110375,
+  "duration": 104503,
   "status": "passed"
 });
 formatter.match({
@@ -1787,55 +1730,48 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 72042,
+  "duration": 112284,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 105750664,
+  "duration": 48509044,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 36879,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 28725,
+  "duration": 31687726,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "14.55",
-      "offset": 25
+      "val": "15.40",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 1437871,
-  "error_message": "java.lang.AssertionError: expected:\u003c14.55\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"14.55\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "duration": 80919,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "7",
+      "val": "3",
       "offset": 19
     }
   ],
   "location": "CalculoFreteSteps.prazo_de_entrega(String)"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 111134,
+  "status": "passed"
 });
 formatter.match({
   "arguments": [
@@ -1847,26 +1783,27 @@ formatter.match({
   "location": "CalculoFreteSteps.eventual_mensagem_de_erro(String)"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.before({
-  "duration": 41171,
+  "duration": 56239,
   "status": "passed"
 });
 formatter.before({
-  "duration": 52432,
+  "duration": 152572,
   "status": "passed"
 });
 formatter.before({
-  "duration": 33903,
+  "duration": 40852,
   "status": "passed"
 });
 formatter.before({
-  "duration": 18681,
+  "duration": 18496,
+  "status": "passed"
+});
+formatter.before({
+  "duration": 24897,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 35,
+  "line": 34,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;7",
@@ -1951,27 +1888,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Peso excedido\"",
   "matchedColumns": [
     9
@@ -1982,14 +1914,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 32010,
+  "duration": 30593,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 237872,
+  "duration": 213285,
   "status": "passed"
 });
 formatter.match({
@@ -2002,7 +1934,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 119876,
+  "duration": 92516,
   "status": "passed"
 });
 formatter.match({
@@ -2015,7 +1947,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 97294,
+  "duration": 84431,
   "status": "passed"
 });
 formatter.match({
@@ -2028,7 +1960,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 190505,
+  "duration": 78380,
   "status": "passed"
 });
 formatter.match({
@@ -2041,7 +1973,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 119077,
+  "duration": 229516,
   "status": "passed"
 });
 formatter.match({
@@ -2054,7 +1986,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 76212,
+  "duration": 57577,
   "status": "passed"
 });
 formatter.match({
@@ -2067,7 +1999,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 98256,
+  "duration": 80315,
   "status": "passed"
 });
 formatter.match({
@@ -2080,48 +2012,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 102708,
+  "duration": 95387,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 34950887,
-  "status": "passed"
+  "duration": 490190,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 34312,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 33501,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 470309,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -2143,23 +2066,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 28476,
+  "duration": 42255,
   "status": "passed"
 });
 formatter.before({
-  "duration": 24727,
+  "duration": 18469,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12513,
+  "duration": 40569,
   "status": "passed"
 });
 formatter.before({
-  "duration": 12410,
+  "duration": 18626,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 36,
+  "line": 35,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;8",
@@ -2244,27 +2167,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Largura Invalida\"",
   "matchedColumns": [
     9
@@ -2275,14 +2193,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 35216,
+  "duration": 32933,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 246832,
+  "duration": 259983,
   "status": "passed"
 });
 formatter.match({
@@ -2295,7 +2213,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 112080,
+  "duration": 94449,
   "status": "passed"
 });
 formatter.match({
@@ -2308,7 +2226,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 100873,
+  "duration": 168150,
   "status": "passed"
 });
 formatter.match({
@@ -2321,7 +2239,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 84085,
+  "duration": 89234,
   "status": "passed"
 });
 formatter.match({
@@ -2334,7 +2252,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 587465,
+  "duration": 154907,
   "status": "passed"
 });
 formatter.match({
@@ -2347,7 +2265,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 113810,
+  "duration": 73696,
   "status": "passed"
 });
 formatter.match({
@@ -2360,7 +2278,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 66716,
+  "duration": 106583,
   "status": "passed"
 });
 formatter.match({
@@ -2373,48 +2291,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 68631,
+  "duration": 86767,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 69609378,
-  "status": "passed"
+  "duration": 476227,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 36089,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 31496,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 441809,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -2436,23 +2345,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 39001,
+  "duration": 52434,
   "status": "passed"
 });
 formatter.before({
-  "duration": 34511,
+  "duration": 27941,
   "status": "passed"
 });
 formatter.before({
-  "duration": 17067,
+  "duration": 16204,
   "status": "passed"
 });
 formatter.before({
-  "duration": 8026,
+  "duration": 79425,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 37,
+  "line": 36,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;9",
@@ -2537,27 +2446,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Altura Invalida\"",
   "matchedColumns": [
     9
@@ -2568,14 +2472,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 23587,
+  "duration": 30654,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 198090,
+  "duration": 212716,
   "status": "passed"
 });
 formatter.match({
@@ -2588,7 +2492,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 160189,
+  "duration": 100841,
   "status": "passed"
 });
 formatter.match({
@@ -2601,7 +2505,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 106111,
+  "duration": 208171,
   "status": "passed"
 });
 formatter.match({
@@ -2614,7 +2518,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 98565,
+  "duration": 108681,
   "status": "passed"
 });
 formatter.match({
@@ -2627,7 +2531,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 150480,
+  "duration": 102859,
   "status": "passed"
 });
 formatter.match({
@@ -2640,7 +2544,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 91819,
+  "duration": 128435,
   "status": "passed"
 });
 formatter.match({
@@ -2653,7 +2557,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 5359216,
+  "duration": 99252,
   "status": "passed"
 });
 formatter.match({
@@ -2666,48 +2570,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 189064,
+  "duration": 243709,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 89337526,
-  "status": "passed"
+  "duration": 611703,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 32248,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 25107,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 477754,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -2729,23 +2624,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 45461,
+  "duration": 40122,
   "status": "passed"
 });
 formatter.before({
-  "duration": 25857,
+  "duration": 22412,
   "status": "passed"
 });
 formatter.before({
-  "duration": 23543,
+  "duration": 87782,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11851,
+  "duration": 15673,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 38,
+  "line": 37,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;10",
@@ -2788,7 +2683,7 @@ formatter.step({
 });
 formatter.step({
   "line": 16,
-  "name": "comprimento: 15,",
+  "name": "comprimento: 130,",
   "matchedColumns": [
     3
   ],
@@ -2830,28 +2725,23 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
-  "name": "eventual mensagem de erro: \"Comprimento Invalida\"",
+  "line": 24,
+  "name": "eventual mensagem de erro: \"Comprimento Invalido\"",
   "matchedColumns": [
     9
   ],
@@ -2861,14 +2751,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 23804,
+  "duration": 45429,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 159168,
+  "duration": 168417,
   "status": "passed"
 });
 formatter.match({
@@ -2881,7 +2771,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 79352,
+  "duration": 93366,
   "status": "passed"
 });
 formatter.match({
@@ -2894,7 +2784,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 397127,
+  "duration": 156632,
   "status": "passed"
 });
 formatter.match({
@@ -2907,20 +2797,20 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 97972,
+  "duration": 90918,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "15",
+      "val": "130",
       "offset": 13
     }
   ],
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 78433,
+  "duration": 159707,
   "status": "passed"
 });
 formatter.match({
@@ -2933,7 +2823,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 54372,
+  "duration": 79677,
   "status": "passed"
 });
 formatter.match({
@@ -2946,7 +2836,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 105035,
+  "duration": 85407,
   "status": "passed"
 });
 formatter.match({
@@ -2959,48 +2849,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 152397,
+  "duration": 138707,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 208806096,
-  "status": "passed"
+  "duration": 609307,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 34769,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 31631,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 419209,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -3012,7 +2893,7 @@ formatter.result({
 formatter.match({
   "arguments": [
     {
-      "val": "Comprimento Invalida",
+      "val": "Comprimento Invalido",
       "offset": 28
     }
   ],
@@ -3022,23 +2903,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 56680,
+  "duration": 37415,
   "status": "passed"
 });
 formatter.before({
-  "duration": 37112,
+  "duration": 17566,
   "status": "passed"
 });
 formatter.before({
-  "duration": 17827,
+  "duration": 11141,
   "status": "passed"
 });
 formatter.before({
-  "duration": 24390,
+  "duration": 9910,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 39,
+  "line": 38,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;11",
@@ -3123,27 +3004,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"CEP Origem Invalido\"",
   "matchedColumns": [
     9
@@ -3154,14 +3030,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 32651,
+  "duration": 35399,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 407582,
+  "duration": 292975,
   "status": "passed"
 });
 formatter.match({
@@ -3174,7 +3050,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 129883,
+  "duration": 114220,
   "status": "passed"
 });
 formatter.match({
@@ -3187,7 +3063,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 219229,
+  "duration": 108037,
   "status": "passed"
 });
 formatter.match({
@@ -3200,7 +3076,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 218598,
+  "duration": 120013,
   "status": "passed"
 });
 formatter.match({
@@ -3213,7 +3089,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 127622,
+  "duration": 121515,
   "status": "passed"
 });
 formatter.match({
@@ -3226,7 +3102,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 109046,
+  "duration": 107227,
   "status": "passed"
 });
 formatter.match({
@@ -3239,7 +3115,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 179831,
+  "duration": 112194,
   "status": "passed"
 });
 formatter.match({
@@ -3252,48 +3128,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 174150,
+  "duration": 812457,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 62310113,
-  "status": "passed"
+  "duration": 472070,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 35757,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 26986,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 349699,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -3315,23 +3182,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 32740,
+  "duration": 35058,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13383,
+  "duration": 12172,
   "status": "passed"
 });
 formatter.before({
-  "duration": 11878,
+  "duration": 21929,
   "status": "passed"
 });
 formatter.before({
-  "duration": 25057,
+  "duration": 10467,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 40,
+  "line": 39,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;12",
@@ -3416,27 +3283,22 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"13.87\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
-  "name": "prazo de entrega: \"3\"",
+  "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
   ],
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"CEP Destino Invalido\"",
   "matchedColumns": [
     9
@@ -3447,14 +3309,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 25098,
+  "duration": 44630,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 208492,
+  "duration": 153370,
   "status": "passed"
 });
 formatter.match({
@@ -3467,7 +3329,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 94215,
+  "duration": 681018,
   "status": "passed"
 });
 formatter.match({
@@ -3480,7 +3342,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 91491,
+  "duration": 103942,
   "status": "passed"
 });
 formatter.match({
@@ -3493,7 +3355,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 88046,
+  "duration": 85000,
   "status": "passed"
 });
 formatter.match({
@@ -3506,7 +3368,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 75426,
+  "duration": 1791698,
   "status": "passed"
 });
 formatter.match({
@@ -3519,7 +3381,7 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 53936,
+  "duration": 87694,
   "status": "passed"
 });
 formatter.match({
@@ -3532,7 +3394,7 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem(int)"
 });
 formatter.result({
-  "duration": 99353,
+  "duration": 4391168,
   "status": "passed"
 });
 formatter.match({
@@ -3545,48 +3407,39 @@ formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino(int)"
 });
 formatter.result({
-  "duration": 81670,
+  "duration": 80948,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 69314558,
-  "status": "passed"
+  "duration": 426940,
+  "error_message": "java.lang.NullPointerException\n\tat com.github.tomakehurst.wiremock.client.ResponseDefinitionBuilder.withBody(ResponseDefinitionBuilder.java:89)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:157)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 31040,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 30507,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "13.87",
-      "offset": 25
+      "val": "",
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 493044,
-  "error_message": "java.lang.AssertionError: expected:\u003c13.87\u003e but was:\u003cnull\u003e\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.failNotEquals(Assert.java:743)\n\tat org.junit.Assert.assertEquals(Assert.java:118)\n\tat org.junit.Assert.assertEquals(Assert.java:144)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:172)\n\tat ✽.And retorna valor do frete: \"13.87\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "3",
+      "val": "",
       "offset": 19
     }
   ],
@@ -3608,23 +3461,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 113716,
+  "duration": 53320,
   "status": "passed"
 });
 formatter.before({
-  "duration": 54221,
+  "duration": 51038,
   "status": "passed"
 });
 formatter.before({
-  "duration": 50453,
+  "duration": 12402,
   "status": "passed"
 });
 formatter.before({
-  "duration": 27388,
+  "duration": 25941,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 41,
+  "line": 40,
   "name": "envio de dados do produto",
   "description": "",
   "id": "calcular-frete;envio-de-dados-do-produto;;13",
@@ -3709,19 +3562,14 @@ formatter.step({
 });
 formatter.step({
   "line": 22,
-  "name": "sistema verifica a validade dos dados",
+  "name": "sistema retorna valor do frete: \"\",",
+  "matchedColumns": [
+    7
+  ],
   "keyword": "Then "
 });
 formatter.step({
   "line": 23,
-  "name": "retorna valor do frete: \"\",",
-  "matchedColumns": [
-    7
-  ],
-  "keyword": "And "
-});
-formatter.step({
-  "line": 24,
   "name": "prazo de entrega: \"\"",
   "matchedColumns": [
     8
@@ -3729,7 +3577,7 @@ formatter.step({
   "keyword": "And "
 });
 formatter.step({
-  "line": 25,
+  "line": 24,
   "name": "eventual mensagem de erro: \"Alguns campos não foram preenchidos\"",
   "matchedColumns": [
     9
@@ -3740,14 +3588,14 @@ formatter.match({
   "location": "CalculoFreteSteps.existe_ao_menos_um_pedido_no_carrinho()"
 });
 formatter.result({
-  "duration": 46982,
+  "duration": 28852,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.servico_dos_correios_esta_operacional()"
 });
 formatter.result({
-  "duration": 212438,
+  "duration": 351510,
   "status": "passed"
 });
 formatter.match({
@@ -3760,7 +3608,7 @@ formatter.match({
   "location": "CalculoFreteSteps.peso(Double)"
 });
 formatter.result({
-  "duration": 274875,
+  "duration": 98639,
   "status": "passed"
 });
 formatter.match({
@@ -3773,7 +3621,7 @@ formatter.match({
   "location": "CalculoFreteSteps.largura(Double)"
 });
 formatter.result({
-  "duration": 215102,
+  "duration": 79180,
   "status": "passed"
 });
 formatter.match({
@@ -3786,7 +3634,7 @@ formatter.match({
   "location": "CalculoFreteSteps.altura(Double)"
 });
 formatter.result({
-  "duration": 80543,
+  "duration": 128276,
   "status": "passed"
 });
 formatter.match({
@@ -3799,7 +3647,7 @@ formatter.match({
   "location": "CalculoFreteSteps.comprimento(Double)"
 });
 formatter.result({
-  "duration": 79965,
+  "duration": 104793,
   "status": "passed"
 });
 formatter.match({
@@ -3812,57 +3660,48 @@ formatter.match({
   "location": "CalculoFreteSteps.tipo_de_entrega(String)"
 });
 formatter.result({
-  "duration": 67334,
+  "duration": 7188698,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.cep_de_origem()"
 });
 formatter.result({
-  "duration": 131813,
+  "duration": 402979,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.cep_de_destino()"
 });
 formatter.result({
-  "duration": 57468,
+  "duration": 83261,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.sistema_solicita_o_calculo_do_frete()"
 });
 formatter.result({
-  "duration": 74902695,
-  "status": "passed"
+  "duration": 62714466,
+  "error_message": "java.lang.NumberFormatException: For input string: \"Error!!!\"\n\tat sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:2043)\n\tat sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)\n\tat java.lang.Double.parseDouble(Double.java:538)\n\tat br.unicamp.bookstore.Correios.calcularFrete(Correios.java:124)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.sistema_solicita_o_calculo_do_frete(CalculoFreteSteps.java:159)\n\tat ✽.When sistema solicita o calculo do frete(features/CalculoFrete.feature:20)\n",
+  "status": "failed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.tempo_de_entrega()"
 });
 formatter.result({
-  "duration": 32752,
-  "status": "passed"
-});
-formatter.match({
-  "location": "CalculoFreteSteps.sistema_verifica_a_validade_dos_dados()"
-});
-formatter.result({
-  "duration": 24446,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
     {
       "val": "",
-      "offset": 25
+      "offset": 33
     }
   ],
-  "location": "CalculoFreteSteps.retorna_valor_do_frete(String)"
+  "location": "CalculoFreteSteps.sistema_retorna_valor_do_frete(String)"
 });
 formatter.result({
-  "duration": 440590,
-  "error_message": "java.lang.NumberFormatException: empty String\n\tat sun.misc.FloatingDecimal.readJavaFormatString(FloatingDecimal.java:1842)\n\tat sun.misc.FloatingDecimal.parseDouble(FloatingDecimal.java:110)\n\tat java.lang.Double.parseDouble(Double.java:538)\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.retorna_valor_do_frete(CalculoFreteSteps.java:171)\n\tat ✽.And retorna valor do frete: \"\",(features/CalculoFrete.feature:23)\n",
-  "status": "failed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -3889,23 +3728,23 @@ formatter.result({
   "status": "skipped"
 });
 formatter.before({
-  "duration": 46485,
+  "duration": 2111348,
   "status": "passed"
 });
 formatter.before({
-  "duration": 22506,
+  "duration": 62642,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13829,
+  "duration": 22106,
   "status": "passed"
 });
 formatter.before({
-  "duration": 13204,
+  "duration": 18091,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 43,
+  "line": 42,
   "name": "Armazena dados de entrega no sistema",
   "description": "",
   "id": "calcular-frete;armazena-dados-de-entrega-no-sistema",
@@ -3913,22 +3752,22 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 44,
+  "line": 43,
   "name": "Sistema tem acesso aos Correios",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 45,
+  "line": 44,
   "name": "Correios retorna prazo de entrega",
   "keyword": "When "
 });
 formatter.step({
-  "line": 46,
+  "line": 45,
   "name": "valor do frete",
   "keyword": "And "
 });
 formatter.step({
-  "line": 47,
+  "line": 46,
   "name": "valores sao armazenados no sistema",
   "keyword": "Then "
 });
@@ -3936,29 +3775,29 @@ formatter.match({
   "location": "CalculoFreteSteps.sistema_tem_acesso_aos_Correios()"
 });
 formatter.result({
-  "duration": 204120,
+  "duration": 222742,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.correios_retorna_prazo_de_entrega()"
 });
 formatter.result({
-  "duration": 23001,
+  "duration": 22440,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.valor_do_frete()"
 });
 formatter.result({
-  "duration": 29005,
+  "duration": 21092,
   "status": "passed"
 });
 formatter.match({
   "location": "CalculoFreteSteps.valores_sao_armazenados_no_sistema()"
 });
 formatter.result({
-  "duration": 349086,
-  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.valores_sao_armazenados_no_sistema(CalculoFreteSteps.java:312)\n\tat ✽.Then valores sao armazenados no sistema(features/CalculoFrete.feature:47)\n",
+  "duration": 411931,
+  "error_message": "java.lang.NullPointerException\n\tat br.unicamp.bookstore.steps.CalculoFreteSteps.valores_sao_armazenados_no_sistema(CalculoFreteSteps.java:323)\n\tat ✽.Then valores sao armazenados no sistema(features/CalculoFrete.feature:46)\n",
   "status": "failed"
 });
 });

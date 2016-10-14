@@ -15,6 +15,7 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
 
 import br.unicamp.bookstore.dao.DadosDeEntregaDAO;
 
@@ -27,6 +28,7 @@ public class Correios {
 	private int prazoEntrega;
 	private String enderecoEntrega;
 	private DadosDeEntregaDAO dao;
+    String retMensagem; 
 	
 	public Correios(DadosDeEntregaDAO dao) {
 		this.dao = dao;
@@ -108,24 +110,96 @@ public class Correios {
 		
 		URI uri = builder.build();
 		HttpGet httpget = new HttpGet(uri);
-		System.out.println(httpget.getURI());
 		
 		CloseableHttpClient httpClient = HttpClients.createDefault();
 		HttpResponse httpResponse = httpClient.execute(httpget);
-		String responseString = convertResponseToString(httpResponse);
+		String freteStr = getReturnedValue(httpResponse);
 		
-		System.out.println(responseString);
+		int code = httpResponse.getStatusLine().getStatusCode();
+		
+		System.out.println("Response code: "+code);
+		
+		retMensagem = getResponseMessage(code);
+		
+		this.valorFrete = Double.parseDouble(freteStr);
 	}
 	
-	private String convertResponseToString(HttpResponse response) throws IOException {
+	private String getReturnedValue(HttpResponse response) throws IOException {
+		String value;
 	    InputStream responseStream = response.getEntity().getContent();
 	    Scanner scanner = new Scanner(responseStream, "UTF-8");
-	    String responseString = scanner.useDelimiter("\\Z").next();
+	    value = scanner.useDelimiter("\\Z").next();
 	    scanner.close();
-	    return responseString;
+	    return value;
 	}
 	
-	public void estimarPrazoEntrega() {
+	public void estimarPrazoEntrega(Pedido pedido) throws URISyntaxException, ClientProtocolException, IOException {
+		Double peso = pedido.getPeso();
+		Double largura = pedido.getLargura();
+		Double altura = pedido.getAltura();
+		Double comprimento = pedido.getComprimento();
+		String tipoEntrega = pedido.getTipoEntrega();
+		Long cepOrig = pedido.getCepOrig();
+		Long cepDest = pedido.getCepDest();
 		
+		URIBuilder builder = new URIBuilder();
+		builder.setScheme("http").setHost("localhost").setPort(8080).setPath("/calcularPrazo")
+		    .addParameter("peso",peso.toString())
+		    .addParameter("largura",largura.toString())
+		    .addParameter("altura",altura.toString())
+		    .addParameter("comprimento",comprimento.toString())
+		    .addParameter("tipoEntrega",tipoEntrega)
+		    .addParameter("cepOrig",cepOrig.toString())
+		    .addParameter("cepDest",cepDest.toString());
+		
+		URI uri = builder.build();
+		HttpGet httpget = new HttpGet(uri);
+		
+		CloseableHttpClient httpClient = HttpClients.createDefault();
+		HttpResponse httpResponse = httpClient.execute(httpget);
+		String prazoStr = getReturnedValue(httpResponse);
+		
+		int code = httpResponse.getStatusLine().getStatusCode();
+		
+		System.out.println("Response code: "+code);
+		
+		retMensagem = getResponseMessage(code);
+		
+		this.prazoEntrega = Integer.parseInt(prazoStr);
+	}
+	
+	String getResponseMessage(int code) {
+		String ret;
+		
+		switch(code) {
+		case 200:
+			ret = "Processamento com Sucesso";
+			break;
+		case 501:
+			ret = "Alguns campos não foram preenchidos";
+			break;
+		case 502:
+			ret = "CEP Origem Invalido";
+			break;
+		case 503:
+			ret = "CEP Destino Invalido"; 
+			break;
+		case 504:
+			ret = "Peso excedido";
+			break;
+		case 505:
+			ret = "Largura Invalida";
+			break;
+		case 506:
+			ret = "Altura Invalida";
+			break;
+		case 507:
+			ret = "Comprimento Invalido";
+			break;
+		default:
+			ret = "Error....";
+		}
+		
+		return ret;
 	}
 }

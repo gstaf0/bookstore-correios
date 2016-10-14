@@ -133,6 +133,8 @@ public class CalculoFreteSteps {
 
 	@When("^sistema solicita o calculo do frete$")
 	public void sistema_solicita_o_calculo_do_frete() throws Throwable {
+		 
+		CorreiosServices cs = new CorreiosServices();
 
 		Double peso = pedido.getPeso();
 		Double largura = pedido.getLargura();
@@ -141,33 +143,53 @@ public class CalculoFreteSteps {
 		String tipoEntrega = pedido.getTipoEntrega();
 		Long cepOrig = pedido.getCepOrig();
 		Long cepDest = pedido.getCepDest();
+		
+		String frete = cs.calcFrete(peso, largura, altura, comprimento, tipoEntrega, cepOrig, cepDest);
 
+		System.out.println("Frete: "+frete);
+		
 		WireMock.stubFor(get(urlEqualTo("/calcularFrete?peso="+peso+"&"
 		+"largura="+largura+"&"
 		+"altura="+altura+"&"
 		+"comprimento="+comprimento+"&"
 		+"tipoEntrega="+tipoEntrega+"&"
 		+"cepOrig="+cepOrig.toString()+"&"
-		+"cepDest="+cepDest))
-				.willReturn(aResponse()
-						.withHeader("Content-Type", "text/plain")
-						.withBody(CorreiosServices.calcFrete(peso,largura,altura,comprimento,tipoEntrega,cepOrig,cepDest)).withBody("aloooooooo")));
+		+"cepDest="+cepDest)).willReturn(aResponse().withStatus(cs.getStatus()).withHeader("Content-Type", "text/plain").withBody(frete)));
 
 		correios.calcularFrete(pedido);
 	}
 
 	@When("^tempo de entrega$")
 	public void tempo_de_entrega() throws Throwable {
-		correios.estimarPrazoEntrega();
-	}
+		
+		CorreiosServices cs = new CorreiosServices();
 
-	@Then("^sistema verifica a validade dos dados$")
-	public void sistema_verifica_a_validade_dos_dados() throws Throwable {
-		assertTrue(correios.validarDados());
+		Double peso = pedido.getPeso();
+		Double largura = pedido.getLargura();
+		Double altura = pedido.getAltura();
+		Double comprimento = pedido.getComprimento();
+		String tipoEntrega = pedido.getTipoEntrega();
+		Long cepOrig = pedido.getCepOrig();
+		Long cepDest = pedido.getCepDest();
+		
+		String frete = cs.calcFrete(peso, largura, altura, comprimento, tipoEntrega, cepOrig, cepDest);
+		String prazo = cs.calcPrazo(tipoEntrega);
+		
+		System.out.println("Prazo: "+prazo);
+		
+		WireMock.stubFor(get(urlEqualTo("/calcularPrazo?peso="+peso+"&"
+		+"largura="+largura+"&"
+		+"altura="+altura+"&"
+		+"comprimento="+comprimento+"&"
+		+"tipoEntrega="+tipoEntrega+"&"
+		+"cepOrig="+cepOrig.toString()+"&"
+		+"cepDest="+cepDest)).willReturn(aResponse().withStatus(cs.getStatus()).withHeader("Content-Type", "text/plain").withBody(prazo)));
+		
+		correios.estimarPrazoEntrega(pedido);
 	}
-
-	@Then("^retorna valor do frete: \"([^\"]*)\",$")
-	public void retorna_valor_do_frete(String arg1) throws Throwable {
+	
+	@Then("^sistema retorna valor do frete: \"([^\"]*)\",$")
+	public void sistema_retorna_valor_do_frete(String arg1) throws Throwable {
 		Double v = Double.parseDouble(arg1);
 		assertEquals(v, correios.getValorFrete());
 	}
@@ -179,7 +201,8 @@ public class CalculoFreteSteps {
 	
 	@Then("^prazo de entrega: \"([^\"]*)\"$")
 	public void prazo_de_entrega(String arg1) throws Throwable {
-		assertEquals(arg1,correios.getPrazoEntrega());
+		int prazo = Integer.parseInt(arg1);
+		assertEquals(prazo,correios.getPrazoEntrega());
 	}
 
 	@Then("^eventual mensagem de erro: \"([^\"]*)\"$")
