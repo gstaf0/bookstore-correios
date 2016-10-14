@@ -23,6 +23,7 @@ import br.unicamp.bookstore.Cliente;
 import br.unicamp.bookstore.Pedido;
 import br.unicamp.bookstore.Correios;
 import br.unicamp.bookstore.dao.DadosDeEntregaDAO;
+import br.unicamp.services.CorreiosServices;
 import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -150,7 +151,7 @@ public class CalculoFreteSteps {
 		+"cepDest="+cepDest))
 				.willReturn(aResponse()
 						.withHeader("Content-Type", "text/plain")
-						.withBody("hjjkkkjh").withBody("aloooooooo")));
+						.withBody(CorreiosServices.calcFrete(peso,largura,altura,comprimento,tipoEntrega,cepOrig,cepDest)).withBody("aloooooooo")));
 
 		correios.calcularFrete(pedido);
 	}
@@ -175,15 +176,10 @@ public class CalculoFreteSteps {
 	public void retorna_valor_do_frete() throws Throwable {
 		assertEquals("", correios.getValorFrete());
 	}
-
-	@Then("^prazo de entrega: (\\d+)$")
-	public void prazo_de_entrega(int arg1) throws Throwable {
+	
+	@Then("^prazo de entrega: \"([^\"]*)\"$")
+	public void prazo_de_entrega(String arg1) throws Throwable {
 		assertEquals(arg1,correios.getPrazoEntrega());
-	}
-
-	@Then("^prazo de entrega: $")
-	public void prazo_de_entrega() throws Throwable {
-		assertEquals("",correios.getPrazoEntrega());
 	}
 
 	@Then("^eventual mensagem de erro: \"([^\"]*)\"$")

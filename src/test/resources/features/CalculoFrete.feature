@@ -26,19 +26,19 @@ Scenario Outline: envio de dados do produto
 		
 	# TODO: Completar essa tabela com mais casos de uso.
 	Examples:
-		| peso | largura | altura | comprimento | tipoEntrega  | CEPorigem | CEPdestino | valorFrete      | prazoEntrega |       mensagemRetorno                  |
-		| 100  |   100   |   80   |     100	    |     "PAC"    | 129122200 |  13083000  |   "4.10"        |      07      | "Processamento com Sucesso"            |
-		| 2500 |    15   |   20   |     120	    |    "SEDEX"   | 129122200 |  13000000  |   "15.40"       |      03      | "Processamento com Sucesso"            |
-		|  80  |    88   |    3   |      50	    |   "SEDEX10"  | 129122200 |  12900001  |   "33.33"       |      01      | "Processamento com Sucesso"            |
-		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      03      | "Processamento com Sucesso"            |
-		| 130  |    33   |    8   |     120	    |    "SEDEX"   | 129122200 |  13083000  |   "14.55"       |      07      | "Processamento com Sucesso"            |
-		| 4000 |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      03      | "Peso excedido"                        |
-		|  80  |   106   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      03      | "Largura Invalida"                     |
-		|  80  |    90   |  106   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      03      | "Altura Invalida"                      |
-		|  80  |    90   |   15   |      15	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      03      | "Comprimento Invalida"                 |
-		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 929122200 |  13083000  |   "13.87"       |      03      | "CEP Origem Invalido"                  |
-		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083999  |   "13.87"       |      03      | "CEP Destino Invalido"                 |
-		| 110  |    20   |   12   |      40	    |       ""     |           |            |   ""            |              | "Alguns campos não foram preenchidos"  |
+		| peso | largura | altura | comprimento | tipoEntrega  | CEPorigem | CEPdestino | valorFrete      | prazoEntrega  |       mensagemRetorno                  |
+		| 100  |   100   |   80   |     100	    |     "PAC"    | 129122200 |  13083000  |   "4.10"        |      "7"      | "Processamento com Sucesso"            |
+		| 2500 |    15   |   20   |     120	    |    "SEDEX"   | 129122200 |  13000000  |   "15.40"       |      "3"      | "Processamento com Sucesso"            |
+		|  80  |    88   |    3   |      50	    |   "SEDEX10"  | 129122200 |  12900001  |   "33.33"       |      "1"      | "Processamento com Sucesso"            |
+		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      "3"      | "Processamento com Sucesso"            |
+		| 130  |    33   |    8   |     120	    |    "SEDEX"   | 129122200 |  13083000  |   "14.55"       |      "7"      | "Processamento com Sucesso"            |
+		| 4000 |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      "3"      | "Peso excedido"                        |
+		|  80  |   106   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      "3"      | "Largura Invalida"                     |
+		|  80  |    90   |  106   |      80	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      "3"      | "Altura Invalida"                      |
+		|  80  |    90   |   15   |      15	    |    "SEDEX"   | 129122200 |  13083000  |   "13.87"       |      "3"      | "Comprimento Invalida"                 |
+		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 929122200 |  13083000  |   "13.87"       |      "3"      | "CEP Origem Invalido"                  |
+		|  80  |    90   |   15   |      80	    |    "SEDEX"   | 129122200 |  13083999  |   "13.87"       |      "3"      | "CEP Destino Invalido"                 |
+		| 110  |    20   |   12   |      40	    |       ""     |           |            |   ""            |      ""       | "Alguns campos não foram preenchidos"  |
 
 Scenario: Armazena dados de entrega no sistema
 	Given Sistema tem acesso aos Correios
