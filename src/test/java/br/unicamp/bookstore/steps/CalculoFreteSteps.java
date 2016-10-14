@@ -90,6 +90,11 @@ public class CalculoFreteSteps {
 	public void peso(Double arg1) throws Throwable {
 		pedido.setPeso(arg1);
 	}
+	
+	@Given("^peso: ,$")
+	public void peso() throws Throwable {
+		pedido.setPeso(null);
+	}
 
 	@Given("^largura: (\\d+),$")
 	public void largura(Double arg1) throws Throwable {
@@ -133,6 +138,10 @@ public class CalculoFreteSteps {
 
 	@When("^sistema solicita o calculo do frete$")
 	public void sistema_solicita_o_calculo_do_frete() throws Throwable {
+		
+		System.out.println("sistema_solicita_o_calculo_do_frete() enter");
+		
+		String pesoStr;
 		 
 		CorreiosServices cs = new CorreiosServices();
 
@@ -146,9 +155,15 @@ public class CalculoFreteSteps {
 		
 		String frete = cs.calcFrete(peso, largura, altura, comprimento, tipoEntrega, cepOrig, cepDest);
 
-		System.out.println("Frete: "+frete);
+		System.out.println("Tipo de entrega: "+tipoEntrega+" - Frete: "+frete);
 		
-		WireMock.stubFor(get(urlEqualTo("/calcularFrete?peso="+peso+"&"
+		if(peso==null) {
+			pesoStr = "";
+		} else {
+			pesoStr = peso.toString();
+		}
+		
+		WireMock.stubFor(get(urlEqualTo("/calcularFrete?peso="+pesoStr+"&"
 		+"largura="+largura+"&"
 		+"altura="+altura+"&"
 		+"comprimento="+comprimento+"&"
@@ -156,11 +171,17 @@ public class CalculoFreteSteps {
 		+"cepOrig="+cepOrig.toString()+"&"
 		+"cepDest="+cepDest)).willReturn(aResponse().withStatus(cs.getStatus()).withHeader("Content-Type", "text/plain").withBody(frete)));
 
+		System.out.println("Após Wiremock");
+		
 		correios.calcularFrete(pedido);
+		
+		System.out.println("sistema_solicita_o_calculo_do_frete() out");
 	}
 
 	@When("^tempo de entrega$")
 	public void tempo_de_entrega() throws Throwable {
+		
+		String pesoStr;
 		
 		CorreiosServices cs = new CorreiosServices();
 
@@ -177,7 +198,13 @@ public class CalculoFreteSteps {
 		
 		System.out.println("Prazo: "+prazo);
 		
-		WireMock.stubFor(get(urlEqualTo("/calcularPrazo?peso="+peso+"&"
+		if(peso==null) {
+			pesoStr = "";
+		} else {
+			pesoStr = peso.toString();
+		}
+		
+		WireMock.stubFor(get(urlEqualTo("/calcularPrazo?peso="+pesoStr+"&"
 		+"largura="+largura+"&"
 		+"altura="+altura+"&"
 		+"comprimento="+comprimento+"&"
@@ -210,115 +237,26 @@ public class CalculoFreteSteps {
 
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	//******************************************************************************************
-	@Given("^o SEDEX$")
-	public void o_SEDEX() throws Throwable {
-		//assertEquals("SEDEX", correios.getTipoEntrega());
-	}
-
-	@Then("^retorna (\\d+),(\\d+) e eventual -(\\d+): Peso excedido$")
-	public void retorna_e_eventual_Peso_excedido(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-4: Peso Excedido", correios.getMensagemErro());
-	}
-
-	@Then("^retorna (\\d+),(\\d+) e eventual -(\\d+): Largura Invalida$")
-	public void retorna_e_eventual_Largura_Invalida(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-13: Largura Invalida", correios.getMensagemErro());
-	}
-
-	@Then("^retorna (\\d+),(\\d+) e eventual -(\\d+): Altura Invalida$")
-	public void retorna_e_eventual_Altura_Invalida(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-14: Altura Invalida", correios.getMensagemErro());
-	}
-
-	@Then("^retorna (\\d+),(\\d+) e eventual -(\\d+): Comprimento Invalida$")
-	public void retorna_e_eventual_Comprimento_Invalida(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-12: Comprimento Invalido", correios.getMensagemErro());
-	}
-
-	@Then("^retorna (\\d+),(\\d+), e eventual -(\\d+): CEP Origem Invalido$")
-	public void retorna_e_eventual_CEP_Origem_Invalido(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-2: CEP Origem Invalido", correios.getMensagemErro());
-	}
-
-	@Then("^retorna (\\d+),(\\d+) e eventual -(\\d+): CEP Destino Invalido$")
-	public void retorna_e_eventual_CEP_Destino_Invalido(int arg1, int arg2, int arg3) throws Throwable {
-		assertEquals(arg1, correios.getValorFrete(), 0);
-		assertEquals(arg2, correios.getPrazoEntrega());
-		assertEquals(arg3, correios.getMensagemErro());
-		assertEquals("-3: CEP Destino Invalido", correios.getMensagemErro());
-	}
-
-
-
-
 	//************************************************************************************
 	@Given("^Sistema tem acesso aos Correios$")
 	public void sistema_tem_acesso_aos_Correios() throws Throwable {
 		//  create mock
 		saveDados = mock(DadosDeEntregaDAO.class);
-		Correios correios = new Correios(saveDados);
+		correios = new Correios(saveDados);
+	}
+	
+	@When("^Correios retorna valor do frete \\$\"([^\"]*)\"$")
+	public void correios_retorna_valor_do_frete_$(String arg1) throws Throwable {
+		correios.setValorFrete(Double.parseDouble(arg1));
 	}
 
-	@When("^Correios retorna prazo de entrega$")
-	public void correios_retorna_prazo_de_entrega() throws Throwable {
-
-		//Correios correios = mock();
-		//assertTrue(correios.getApiUp());
-
-
-	}
-
-	@When("^valor do frete$")
-	public void valor_do_frete() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		//throw new PendingException();
+	@When("^prazo de entrega (\\d+)$")
+	public void prazo_de_entrega(int arg1) throws Throwable {
+		correios.setPrazoEntrega(arg1);
 	}
 
 	@Then("^valores sao armazenados no sistema$")
 	public void valores_sao_armazenados_no_sistema() throws Throwable {
-
-
 
 		Integer prazoDeEntrega = correios.getPrazoEntrega();
 		Double valorFrete = correios.getValorFrete();
